@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Clase_Encapsulamiento.Clases
 {
-    internal class Negocio
+    public class Negocio
     {
         private PuestoAtencion caja;
         private Queue<Cliente> clientes;
         private String nombre;
 
-        public Negocio()
+        private Negocio()
         {
-            PuestoAtencion caja = new PuestoAtencion(PuestoAtencion.Puesto.Caja1);
-            Queue<Cliente> clientes = new Queue<Cliente>();
+            this.caja = new PuestoAtencion(PuestoAtencion.Puesto.Caja1);
+            this.clientes = new Queue<Cliente>();
             nombre = "Nombre no ingresado";
         }
 
@@ -41,14 +41,20 @@ namespace Clase_Encapsulamiento.Clases
         {
             bool retorno = false;
 
-            List<Cliente> aux = new List<Cliente>();
-            aux = n.clientes.ToList();
-
-            if (aux.Contains(c))
+            if (n.clientes.Count == 0)
             {
-                retorno = true;
+                Console.WriteLine("No hay clientes en fila!");
             }
+            else
+            {
+                List<Cliente> aux = new List<Cliente>();
+                aux = n.clientes.ToList();
 
+                if (aux.Contains(c))
+                {
+                    retorno = true;
+                }
+            }
             return retorno;
         }
 
@@ -76,15 +82,16 @@ namespace Clase_Encapsulamiento.Clases
 
         public static bool operator ~(Negocio n)
         {
-            bool retorno = false;
 
-            Cliente clientePorAtender = n.Cliente;
-            
-            if(n.caja.Atender(clientePorAtender))
+            if(n.ClientesPendientes > 0)
             {
-                retorno = true;
+                return (n.caja.Atender(n.Cliente));
             }
-            return retorno;
+            else
+            {
+                Console.WriteLine("Ya no hay clientes por atender");
+                return false;
+            }
         }
     }
 }

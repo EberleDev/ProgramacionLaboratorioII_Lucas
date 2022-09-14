@@ -2,7 +2,7 @@
 
 namespace Clase_Encapsulamiento.Clases
 {
-    internal class PuestoAtencion
+    public class PuestoAtencion
     {
         static private int numeroActual;
         private Puesto puesto;

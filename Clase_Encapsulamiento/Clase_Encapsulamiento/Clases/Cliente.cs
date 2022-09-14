@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clase_Encapsulamiento.Clases
 {
-    internal class Cliente
+    public class Cliente
     {
 
         private string _nombre;
@@ -14,6 +14,7 @@ namespace Clase_Encapsulamiento.Clases
 
         public Cliente(int numero)
         {
+            _nombre = "dato no cargado";
             _numero = numero;
         }
         public Cliente(int numero, string nombre) :this(numero)
