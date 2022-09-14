@@ -5,7 +5,6 @@ namespace Ejercicio03_Colecciones_
         public Form1()
         {
             InitializeComponent();
-            Dictionary<string, int> diccionario = new Dictionary<string, int>();
             
         }
 
@@ -17,17 +16,17 @@ namespace Ejercicio03_Colecciones_
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string texto = cuadroTexto.Text;
 
+            String[] palabras = texto.Split(" ");
+
+            Dictionary<string, int> diccionario = new Dictionary<string, int>();
 
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            string texto = cuadroTexto.Text;
-
-            String[] subStrings = new String[5000];
-            texto.Split(" ");
-
+            
         }
     }
 }
