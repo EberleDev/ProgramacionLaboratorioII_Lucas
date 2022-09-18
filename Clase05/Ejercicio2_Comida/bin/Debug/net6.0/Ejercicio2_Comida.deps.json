@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Ejercicio2_Comida/1.0.0": {
+        "dependencies": {
+          "Ejercicio01_MaquinaExpendedora": "1.0.0"
+        },
+        "runtime": {
+          "Ejercicio2_Comida.dll": {}
+        }
+      },
+      "Ejercicio01_MaquinaExpendedora/1.0.0": {
+        "runtime": {
+          "Ejercicio01_MaquinaExpendedora.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ejercicio2_Comida/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ejercicio01_MaquinaExpendedora/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
