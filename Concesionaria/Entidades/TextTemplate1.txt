@@ -1,0 +1,7 @@
+﻿
+
+Concesionaria
+
+Dos sucursales
+
+sucursal -> 1 gerente
