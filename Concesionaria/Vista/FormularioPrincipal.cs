@@ -27,6 +27,7 @@ namespace Vista
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = listaGerentes;
 
+
             }
             else
             {
